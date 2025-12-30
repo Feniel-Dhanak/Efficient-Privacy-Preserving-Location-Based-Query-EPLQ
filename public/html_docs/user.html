@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EPLQ | User</title>
+  <link rel="stylesheet" href="../styles/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">User Dashboard</h1>
+
+    <!-- Passphrase -->
+    <form id="passphrase-form" class="form">
+      <label for="passphrase">Encryption Passphrase</label>
+      <input type="password" id="passphrase" required placeholder="Enter passphrase"/>
+      <button type="submit" class="passphrase-btn">Set Passphrase</button>
+    </form>
+
+    <hr style="margin: 2rem 0; border: 1px solid #ccc"/>
+
+    <!-- Search form -->
+    <form id="query-form" class="form">
+      <label for="keyword">Search Category</label>
+      <input type="text" id="keyword" required placeholder="e.g., health"/>
+      <button type="submit" class="upload-btn">Search</button>
+    </form>
+
+    <div id="results" style="margin-top:2rem;"></div>
+
+    <button id="logout" class="logout-btn">Logout</button>
+  </div>
+
+  <!-- Firebase setup -->
+  <script type="module" src="../js/firebase.js"></script>
+  <!-- User logic -->
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.js"></script>
+  <script type="module" src="../js/user.js"></script>
+</body>
+</html>

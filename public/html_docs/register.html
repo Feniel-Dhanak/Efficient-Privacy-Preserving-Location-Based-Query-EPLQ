@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EPLQ | Register</title>
+  <link rel="stylesheet" href="../styles/register.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Create Account</h1>
+
+    <form id="register-form" class="form">
+      <label for="email">Email</label>
+      <input type="email" id="email" required placeholder="Enter your email" />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required placeholder="Enter a password" />
+
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" required placeholder="Re-enter your password" />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <p class="switch">
+      Already have an account? <a href="login.html">Login here</a>
+    </p>
+  </div>
+
+  <!-- Firebase setup -->
+  <script type="module" src="../js/firebase.js"></script>
+  <!-- Register logic -->
+  <script type="module" src="../js/register.js"></script>
+</body>
+</html>

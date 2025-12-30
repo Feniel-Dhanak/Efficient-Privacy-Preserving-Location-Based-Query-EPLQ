@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EPLQ | Admin</title>
+  <link rel="stylesheet" href="../styles/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Admin Panel</h1>
+
+    <!-- Passphrase -->
+    <form id="passphrase-form" class="form">
+      <label for="passphrase">Encryption Passphrase</label>
+      <input type="password" id="passphrase" required placeholder="Enter passphrase"/>
+      <button type="submit" class="passphrase-btn">Set Passphrase</button>
+    </form>
+
+    <hr style="margin: 2rem 0; border: 1px solid #ccc"/>
+
+    <!-- POI Upload -->
+    <form id="poi-form" class="form">
+      <label for="name">POI Name</label>
+      <input type="text" id="name" required placeholder="e.g., Hospital"/>
+
+      <label for="category">Category</label>
+      <input type="text" id="category" required placeholder="e.g., Health"/>
+
+      <label for="lat">Latitude</label>
+      <input type="number" step="any" id="lat" required placeholder="e.g., 19.0760"/>
+
+      <label for="lng">Longitude</label>
+      <input type="number" step="any" id="lng" required placeholder="e.g., 72.8777"/>
+      <br> <br>
+      <div class="button-row">
+        <button type="submit" class="upload-btn">Upload POI</button>
+        <button type= "button" id="logout" class="logout-btn">Logout</button>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- Firebase setup -->
+  <script type="module" src="../js/firebase.js"></script>
+  <!-- Encryption -->
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.js"></script>
+  <!-- Admin logic -->
+  <script type="module" src="../js/admin.js"></script>
+</body>
+</html>
